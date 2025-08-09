@@ -23,7 +23,7 @@ jobs:
       - name: Run HubSpot Fetch Script
         env:
           HUBSPOT_API_KEY: ${{ secrets.HUBSPOT_API_KEY }}
-        run: python fetch_hubspot_all_objects.py
+        run: python main.py
 
       - name: Commit & Push Updated Data
         run: |

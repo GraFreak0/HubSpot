@@ -1,6 +1,6 @@
+import os
 import requests
 import pandas as pd
-import os
 
 # =========================
 # CONFIGURATION
@@ -35,34 +35,38 @@ OBJECTS = {
 # =========================
 def fetch_all_objects(object_name, endpoint):
     """
-    Fetch all records for a given HubSpot object type.
+    Fetch all records for a given HubSpot object type in batches of 1000.
     """
     url = f"https://api.hubapi.com/{endpoint}"
     headers = {
         "Authorization": f"Bearer {HUBSPOT_API_KEY}"
     }
     params = {
-        "limit": 100,  # Max allowed
-        "properties": ["*"],  # Fetch all properties
+        "limit": 1000,  # Maximum allowed per request for most HubSpot CRM APIs
         "archived": "false"
     }
 
     all_results = []
+    page_count = 0
+
     while True:
-        response = requests.get(url, headers=headers, params=params)
+        response = requests.get(url, headers=headers, params=params, timeout=60)
         response.raise_for_status()
         data = response.json()
 
         results = data.get("results", [])
         all_results.extend(results)
 
+        page_count += 1
+        print(f"📄 {object_name}: Fetched batch {page_count} ({len(results)} records)")
+
         paging = data.get("paging", {}).get("next", {})
-        if paging.get("after"):
+        if "after" in paging:
             params["after"] = paging["after"]
         else:
             break
 
-    print(f"✅ {object_name}: {len(all_results)} records fetched")
+    print(f"✅ {object_name}: {len(all_results)} total records fetched")
     return all_results
 
 # =========================

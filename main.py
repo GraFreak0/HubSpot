@@ -1,6 +1,7 @@
 import os
 import requests
 import pandas as pd
+import clickhouse_connect
 from dotenv import load_dotenv
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -9,6 +10,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # =========================
 load_dotenv()
 ACCESS_TOKEN = os.getenv("HUBSPOT_ACCESS_TOKEN")
+CLICKHOUSE_HOST = os.getenv("CLICKHOUSE_HOST", "localhost")
+CLICKHOUSE_PORT = int(os.getenv("CLICKHOUSE_PORT", 8123))
+CLICKHOUSE_USER = os.getenv("CLICKHOUSE_USER", "default")
+CLICKHOUSE_PASSWORD = os.getenv("CLICKHOUSE_PASSWORD", "")
 if not ACCESS_TOKEN:
     raise ValueError("Please set the HUBSPOT_ACCESS_TOKEN environment variable.")
 
@@ -35,6 +40,59 @@ OBJECTS = {
     "taxes": "crm/v3/objects/taxes",    
     # "tickets": "crm/v3/objects/tickets"
 }
+
+
+# =========================
+# CLICKHOUSE CLIENT
+# =========================
+client = clickhouse_connect.get_client(
+    host=CLICKHOUSE_HOST,
+    # port=CLICKHOUSE_PORT,
+    user=CLICKHOUSE_USER,
+    password=CLICKHOUSE_PASSWORD,
+    secure=True,  # Set to True if using HTTPS
+)
+
+import pandas as pd
+import clickhouse_connect
+
+client = clickhouse_connect.get_client(
+    host=CLICKHOUSE_HOST,
+    user=CLICKHOUSE_USER,
+    password=CLICKHOUSE_PASSWORD,
+    secure=True,
+)
+
+def create_table_if_not_exists(table_name, df):
+    """Create ClickHouse table if it doesn't exist, with columns based on DataFrame dtypes."""
+    columns = []
+    for col, dtype in df.dtypes.items():
+        if pd.api.types.is_integer_dtype(dtype):
+            col_type = "Int64"
+        elif pd.api.types.is_float_dtype(dtype):
+            col_type = "Float64"
+        else:
+            col_type = "String"
+        columns.append(f"`{col}` {col_type}")
+
+    columns_sql = ", ".join(columns)
+    create_sql = f"""
+    CREATE TABLE IF NOT EXISTS `{table_name}` (
+        {columns_sql}
+    ) ENGINE = MergeTree()
+    ORDER BY tuple()
+    """
+    client.command(create_sql)
+
+def insert_into_clickhouse(table_name, df):
+    """Insert DataFrame data into ClickHouse, replacing None/NaN with empty strings."""
+    # Replace None/NaN in object/string columns with empty string
+    for col in df.columns:
+        if df[col].dtype == object or pd.api.types.is_string_dtype(df[col]):
+            df[col] = df[col].fillna("")
+    
+    create_table_if_not_exists(table_name, df)
+    client.insert_df(table_name, df)
 
 # =========================
 # FETCH FUNCTION
@@ -89,12 +147,19 @@ if __name__ == "__main__":
                 obj_name, records = future.result()
                 if records:
                     df = pd.json_normalize(records)
+
+                    # Save to CSV
                     output_path = os.path.join(OUTPUT_DIR, f"{obj_name}.csv")
                     df.to_csv(output_path, index=False, encoding="utf-8")
                     print(f"💾 Saved: {output_path}")
+
+                    # Insert into ClickHouse
+                    insert_into_clickhouse(obj_name, df)
+                    print(f"📦 Loaded into ClickHouse table: {obj_name}")
+
                 else:
                     print(f"⚠️ No records found for {obj_name}")
             except requests.exceptions.HTTPError as e:
                 print(f"❌ Error fetching {obj}: {e}")
 
-    print("🎯 All objects fetched successfully.")
+    print("🎯 All objects fetched and loaded successfully.")

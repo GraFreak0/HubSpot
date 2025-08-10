@@ -18,11 +18,11 @@ jobs:
           python-version: "3.12"  # Specify the Python version
 
       - name: Install Dependencies
-        run: pip install pandas requests
+        run: pip install -r requirements.txt
 
       - name: Run HubSpot Fetch Script
         env:
-          HUBSPOT_API_KEY: ${{ secrets.HUBSPOT_API_KEY }}
+          HUBSPOT_API_KEY: ${{ secrets.HUBSPOT_ACCESS_TOKEN }}
         run: python main.py
 
       - name: Commit & Push Updated Data

@@ -27,8 +27,8 @@ A Python-based tool for securely and efficiently exporting **all** HubSpot CRM o
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-org/hubspot-data-exporter.git
-cd hubspot-data-exporter
+git clone https://github.com/your-org/HubSpot.git
+cd HubSpot
 ```
 
 ### 2. Install Dependencies

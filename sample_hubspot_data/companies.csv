@@ -1,0 +1,101 @@
+id,createdAt,hs_object_id,company_name,industry
+1fcb1204-2acf-4f81-b935-84bab17d02d0,2025-06-22 06:48:48,847225,Peck Ltd,Healthcare
+ecf7f75d-45e7-4d0e-87d5-a6ba2e398ca6,2025-01-06 17:27:14,399374,Richards Group,Finance
+99b818d8-ea77-454b-8287-d9c6a8ffeedb,2025-04-30 16:21:08,995501,Rodriguez Inc,Healthcare
+3da2fa14-644d-4801-9efb-bd79ae747804,2025-05-28 06:54:54,503273,Smith-Martinez,Healthcare
+9dbbc80b-d057-4882-b2cf-1810b5bf162b,2025-04-25 17:41:49,396957,"Trujillo, May and Long",Healthcare
+3afc2f1d-7c85-4b8d-ad88-cab586e75e4c,2025-05-28 19:22:56,830446,Wilcox-Schneider,Retail
+2bcc1eee-2798-4cf9-adcf-ebb6b9c22892,2025-05-29 03:42:12,923479,Porter Inc,Retail
+9f49e9b8-f6b4-4925-857f-a26e18dbd70b,2025-03-22 01:42:30,669637,Chapman-Rhodes,Healthcare
+d553591b-6967-4d59-8a3b-bf71d1873939,2025-03-21 23:32:06,393923,Phillips Inc,Retail
+33ca714e-fee0-4521-9280-cedd66dc5323,2025-03-10 04:46:34,585350,"Myers, Carroll and Young",Tech
+023c3936-e29c-46bb-840d-17d865609084,2025-03-17 09:27:05,594406,"Espinoza, Morris and Elliott",Tech
+0b74d361-b945-4253-bea4-8136008e4164,2025-04-09 13:10:17,848793,Burgess-Cisneros,Retail
+29cda4d3-c019-46b1-870c-8ee58278164c,2025-04-02 08:02:19,359268,Brady Inc,Retail
+5b068b3f-60e4-4be9-b41a-f67bca3947ac,2025-01-09 22:46:38,633080,Cruz Ltd,Healthcare
+b7a4ebe7-3193-48a5-85ab-ee44f8cf1f75,2025-06-28 21:28:22,163562,Obrien Group,Finance
+4df068c6-ccd2-4162-80ac-9d34675cb18a,2025-04-03 07:16:19,493604,Baker Ltd,Retail
+8236ac2b-ad10-4f63-8ebe-24cbd9534cd7,2025-02-08 14:17:48,454232,Wells-Ashley,Tech
+3a6d64af-b0bd-4b8d-b70d-f5ce172050f7,2025-02-07 17:33:35,703919,Lara-Ortiz,Healthcare
+e6e65cf2-8765-435f-be26-a8e6880b69f3,2025-01-11 03:52:51,646906,"Mccall, Clark and Martin",Retail
+b16fdfda-6d23-4143-afe3-ce1f8065cbfd,2025-03-07 11:37:17,823702,Reyes Inc,Tech
+44c2f941-8337-4dd2-8d3d-aa9789534b6c,2025-05-22 23:00:06,177131,"Williamson, Ingram and Snyder",Tech
+d920610a-fd85-414a-92ce-525b318b61bf,2025-07-25 11:46:04,818630,Johnson PLC,Finance
+5b640b51-ab19-4a42-80c2-5f7f07546bd5,2025-02-08 17:53:34,894297,Drake-Wells,Healthcare
+6844f38e-969b-49c9-9baa-91aad1710c93,2025-04-22 04:14:43,919009,"Dickerson, Khan and Norris",Healthcare
+cdc43089-f91f-4266-8793-33f00bff4a25,2025-02-04 06:57:14,593293,Garcia-Christensen,Finance
+3103a04a-6f3b-43ec-b4ca-a02ecb316ffb,2025-01-01 13:06:25,776235,Fuller-Carter,Finance
+fde2b0a9-44f0-4849-869c-58569729f1d1,2025-06-20 16:35:08,821305,Goodman-Gutierrez,Healthcare
+253fa68b-a710-4917-8876-b90dd9dc05d9,2025-01-30 10:24:08,403928,Burnett-Montoya,Healthcare
+57ea6678-e36e-438d-ab7c-0e6ce1b7fffb,2025-07-15 11:46:12,492110,"Hawkins, Moore and Jones",Retail
+49362a2b-1258-46ba-bd6a-4a83d8c7538a,2025-08-01 10:59:33,875924,Lopez PLC,Retail
+d4acc5b2-33d9-438d-b89d-32a230623528,2025-06-19 12:46:35,780844,Lyons Group,Finance
+b7d68079-e5bf-47c9-a709-b1f460822343,2025-05-02 16:54:59,745410,Oconnor-Young,Retail
+b6c11e8c-eca1-42f6-ae09-a01942fc69b3,2025-04-07 04:21:01,547917,Acosta Ltd,Tech
+fb7b4811-3a8a-4468-a586-6e3767952768,2025-01-24 07:03:41,296189,Bass-Kennedy,Retail
+c5ef0a0f-2cfe-4e3e-af79-de838cf607b6,2025-01-14 22:44:42,772593,Allen Inc,Retail
+1242fbe0-c0bf-475b-9f92-f55cf5cb33f0,2025-07-20 11:59:11,752936,"Stout, Mcmillan and Melton",Tech
+f3b2028b-5531-4b03-9ab1-b8d3666e4216,2025-05-17 21:03:05,507450,Johnson-Ross,Finance
+eabc361f-6ad2-4b9d-8f41-1bc0ccadb9fb,2025-01-29 19:06:53,782021,Black-Smith,Tech
+d2db1e5c-7796-4471-9efc-12534730b3c2,2025-02-03 16:36:00,213339,Shaw PLC,Retail
+ad1c1874-c623-4b07-8ed3-f1aeb451be6f,2025-03-10 06:39:04,812935,"Velasquez, Cook and Curry",Finance
+b6a9118d-d1fc-4ea6-8a20-9b0615147666,2025-01-26 21:50:00,525798,Hall Ltd,Retail
+66942e84-db6b-43c1-9d5c-dba02f393301,2025-02-20 01:37:32,329075,Smith and Sons,Tech
+af82c2ce-c7cf-4d9e-bef0-8d29bfbf0735,2025-03-09 10:16:24,757282,"Taylor, Smith and Martinez",Tech
+e71ee765-ae79-4dc4-ae81-76fdf590558b,2025-01-05 16:51:30,186710,Cooper-Allen,Retail
+ed57a2aa-5eb8-4981-b7ca-c3fa0ee880a7,2025-01-30 12:53:41,908361,"Davis, Peters and Knox",Healthcare
+7f04251c-03b8-437b-aa0c-9ae96812e0c3,2025-05-26 22:21:11,928812,"Jacobs, Harvey and Miller",Healthcare
+91622503-525f-42ca-9357-79eff7d7e0ca,2025-05-22 04:33:46,263611,Medina PLC,Tech
+0fc2791c-9edd-47cb-b594-c216d0a4bcf1,2025-06-16 11:55:04,430628,Robinson Ltd,Tech
+3918baf3-8914-4b64-a97a-fde9477ab655,2025-01-23 15:48:29,210676,Davis LLC,Healthcare
+c1df36c4-32a4-4d15-9f2e-d2afadf99b8b,2025-06-16 23:01:08,288268,"Kirby, Drake and Roy",Healthcare
+e5dbfe8e-0f10-4d48-8de3-9e48766f2b73,2025-05-14 03:49:22,530326,Burnett Inc,Retail
+f85e8bb8-1537-4026-b978-4e9f5ef39bb0,2025-07-08 07:27:53,705208,Kidd PLC,Retail
+7df2cbbe-39eb-433d-8de4-39feec3ee7ef,2025-03-25 10:32:27,331593,"Sanders, Willis and Thompson",Healthcare
+a2b1b9a2-30ba-4088-b12d-4dd4afcc1c25,2025-04-07 09:08:55,435029,Gomez Group,Retail
+a93f9fe7-fc24-4d7a-a93b-5a4487c5e509,2025-07-30 05:51:06,613351,"Holmes, Marshall and Horn",Retail
+9591cb9b-a1b3-407c-bc2a-53d85bf7cd20,2025-05-24 17:25:25,352611,"Dominguez, Butler and King",Finance
+ed95bd17-8e10-4126-becf-9787a387d508,2025-01-01 17:58:07,402156,"Harding, Brooks and Hall",Retail
+795db06c-3159-451d-9815-83f251b095fd,2025-06-07 09:44:15,420937,Knox-Rogers,Tech
+7b209add-38be-48eb-b9d7-e295d0271286,2025-06-19 18:39:35,792434,"Robinson, Yates and Thomas",Retail
+ea83aa05-22b4-4475-a1c5-2dc43a21ddaf,2025-07-31 12:56:32,638664,Mullins Ltd,Retail
+2aa721db-6bd7-465e-a32f-65678ffa481f,2025-04-29 23:03:41,475136,"Murillo, Mckinney and Sharp",Healthcare
+3762021a-4fcf-4265-bc93-72319c759c6a,2025-05-31 18:25:04,545322,Hendrix Group,Tech
+b608b20f-b1f6-4ee1-b4a3-c33aff61a61e,2025-07-14 16:16:09,111697,Ramos-Holt,Retail
+abae418d-fcc5-4a1f-99d2-089abae90d9b,2025-03-17 02:15:31,221004,"Bennett, Hull and Lewis",Retail
+750ae6fb-5653-4c24-89bc-a18d34adbb06,2025-03-30 15:21:49,941415,"Galvan, Salas and Rich",Finance
+60a91fa0-b81e-4900-a0e5-dee47f07b6d6,2025-02-19 08:13:42,150457,"Hall, Faulkner and Fitzpatrick",Retail
+fee2affe-4bb2-4012-bf4b-f58cada96168,2025-03-08 07:26:10,853177,"Reid, Werner and Ford",Retail
+57486159-967f-423e-b113-a27906742f7b,2025-07-19 01:08:16,406454,Ford Inc,Finance
+75328473-2074-4e4f-ba1b-a53dadbb7ebd,2025-06-28 12:37:20,205123,"Johnson, Chapman and Bowers",Healthcare
+9f5cf6f3-7546-4e5d-8df6-f4c0626d2522,2025-02-27 12:10:50,192524,Walker-Skinner,Retail
+1df32527-7e18-442a-9066-20b3a2e7555a,2025-01-10 10:52:48,971112,Nelson-Callahan,Finance
+5cd73208-c68d-4843-845e-ad7cbf2e7277,2025-01-03 15:34:41,622030,Anderson-Smith,Tech
+e718be20-0b3f-4f6c-9e50-97a62d4cd601,2025-05-14 05:11:45,922805,Jones-Holland,Healthcare
+92f93916-d044-4089-936b-53d3b4f0d051,2025-03-31 13:21:42,503865,Tyler Ltd,Tech
+c64a8240-59f6-4e36-a22f-01b26994f159,2025-03-07 17:18:39,633941,Ho and Sons,Tech
+17da0d36-146c-4754-9ff0-b1e219e3031b,2025-04-11 06:02:24,599527,Gould LLC,Finance
+6ba8c410-f78f-4694-bac8-17f82a4d805f,2025-03-18 12:54:40,851140,"Kennedy, Lee and Bowen",Retail
+a1ec11cc-cbd9-4704-b94f-efd274dfb666,2025-02-20 15:28:13,800648,Johnson-Johnston,Finance
+2e8475e4-a91c-465a-b1f6-7d0413fb2c44,2025-08-01 07:09:05,878031,Richardson PLC,Finance
+182c2f54-a2bf-40dc-bf24-921123318fba,2025-05-03 20:36:57,336764,Lawson-Johnston,Finance
+cd6bb285-56dd-4458-965f-dccc0d59c026,2025-03-05 10:40:47,431600,Murray-Hernandez,Finance
+291b4627-cf10-457a-8b28-9ef78fd0a449,2025-01-13 23:50:43,862007,"Carter, Williams and Merritt",Healthcare
+11387b1f-d4f2-472d-9a9c-7463030a639c,2025-05-16 16:01:10,113541,Pope-Charles,Retail
+29486fca-e6cf-47bf-aa7e-56b0dae9d342,2025-07-09 07:03:54,150445,Chavez Ltd,Tech
+9243c368-69cb-485a-b43f-1ff68af5cb1e,2025-05-03 16:11:51,269888,Jensen and Sons,Tech
+4d1246e2-2482-4d24-80a0-77c7013b66dd,2025-06-12 05:22:18,725116,Pena-Medina,Retail
+213a4acd-cab1-47ee-b70c-de3c3ebc52b8,2025-03-24 06:07:10,487606,Wright-Wood,Tech
+807e2f24-95bc-4a5f-b094-fcbe3080c22b,2025-01-30 15:37:11,497680,Bell Inc,Retail
+04e9992a-9716-47be-8c90-cae129811f91,2025-03-19 02:58:28,840299,Arellano LLC,Tech
+2865dabf-3722-4edc-add1-77454d729c8a,2025-02-05 16:39:49,882298,Kramer Inc,Finance
+fa288432-f102-4873-8f37-eb6299d3e490,2025-01-20 06:38:29,703341,Dennis-Logan,Tech
+eb070c00-426b-4829-9a49-3ab83120c396,2025-07-15 11:54:54,984595,"Blevins, Gomez and Cook",Retail
+3d6f551d-11c7-4a49-82b4-721424a8fbb5,2025-08-05 09:27:27,185035,"Davis, Beard and Hopkins",Retail
+70b19897-cf60-445e-ab6b-c15c4581c160,2025-03-15 02:55:27,314324,Gregory-Ellison,Retail
+39ffa1ff-9857-486d-9b0e-9810faaab8f0,2025-04-24 09:11:52,868004,Ball LLC,Retail
+6ca61e36-97b8-4b0c-83d6-8b471de83f84,2025-01-24 06:49:47,171044,Williams-Young,Retail
+404a5d6f-791d-49a1-b6fe-68ff90b67027,2025-01-20 05:51:06,527657,Anderson PLC,Healthcare
+970e50d7-b478-4925-b47f-95bc0cdfc4a8,2025-01-25 21:53:35,761399,Brown Ltd,Healthcare
+9af82b43-69c7-4750-9825-351a0ae6c678,2025-03-27 04:15:40,103513,"Parsons, Hamilton and Dean",Tech
+7d0e2b7c-f015-41ff-9cdd-573236009c21,2025-03-16 03:53:23,558106,"Garcia, Hurley and Sanders",Retail

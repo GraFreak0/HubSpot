@@ -10,13 +10,15 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # =========================
 load_dotenv()
 
-ACCESS_TOKEN = os.getenv("HUBSPOT_ACCESS_TOKEN")
+API_KEY = os.getenv("HUBSPOT_API_KEY")
 CLICKHOUSE_HOST = os.getenv("CLICKHOUSE_HOST", "localhost")
 CLICKHOUSE_PORT = int(os.getenv("CLICKHOUSE_PORT", 8123))
 CLICKHOUSE_USER = os.getenv("CLICKHOUSE_USER", "default")
 CLICKHOUSE_PASSWORD = os.getenv("CLICKHOUSE_PASSWORD", "")
-if not ACCESS_TOKEN:
-    raise ValueError("Please set the HUBSPOT_ACCESS_TOKEN environment variable.")
+
+print("API_KEY:", API_KEY)
+if not API_KEY:
+    raise ValueError("Please set the HUBSPOT_API_KEY environment variable.")
 
 OUTPUT_DIR = "hubspot_data"
 MAX_WORKERS = 8  # Parallel threads
@@ -28,18 +30,18 @@ OBJECTS = {
     "deals": "crm/v3/objects/deals",
     "discounts": "crm/v3/objects/discounts",
     "fees": "crm/v3/objects/fees",
-    # "goals": "crm/v3/objects/goals",
+    "goals": "crm/v3/objects/goals",
     "invoices": "crm/v3/objects/invoices",
-    # "leads": "crm/v3/objects/leads",
+    "leads": "crm/v3/objects/leads",
     "line_items": "crm/v3/objects/line_items",
     "orders": "crm/v3/objects/orders",
-    # "partner_clients": "crm/v3/objects/partner_clients",
-    # "partner_services": "crm/v3/objects/partner_services",
-    # "payments": "crm/v3/objects/payments",
+    "partner_clients": "crm/v3/objects/partner_clients",
+    "partner_services": "crm/v3/objects/partner_services",
+    "payments": "crm/v3/objects/payments",
     "products": "crm/v3/objects/products",
     "quotes": "crm/v3/objects/quotes",
     "taxes": "crm/v3/objects/taxes",    
-    # "tickets": "crm/v3/objects/tickets"
+    "tickets": "crm/v3/objects/tickets",
     "calls": "crm/v3/objects/calls",
     "emails": "crm/v3/objects/emails",
     "meetings": "crm/v3/objects/meetings",
@@ -51,7 +53,6 @@ OBJECTS = {
     "postal_mail": "crm/v3/objects/postal_mail",
 }
 
-
 # =========================
 # CLICKHOUSE CLIENT
 # =========================
@@ -60,7 +61,7 @@ client = clickhouse_connect.get_client(
     # port=CLICKHOUSE_PORT,
     user=CLICKHOUSE_USER,
     password=CLICKHOUSE_PASSWORD,
-    secure=True,  # Set to True if using HTTPS
+    secure=True,
 )
 
 import pandas as pd
@@ -110,7 +111,7 @@ def insert_into_clickhouse(table_name, df):
 def fetch_all_objects(object_name, endpoint):
     url = f"https://api.hubapi.com/{endpoint}"
     headers = {
-        "Authorization": f"Bearer {ACCESS_TOKEN}",
+        "Authorization": f"Bearer {API_KEY}",
         "Content-Type": "application/json",
         "accept": "application/json"
     }

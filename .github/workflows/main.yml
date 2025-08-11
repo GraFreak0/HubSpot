@@ -12,6 +12,7 @@ permissions:
 jobs:
   fetch-data:
     runs-on: ubuntu-latest
+    environment: Hubspot
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4

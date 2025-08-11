@@ -68,24 +68,27 @@ hubspot_data/
 
 | Object Name       | API Endpoint                          | Description                          |
 |-------------------|----------------------------------------|--------------------------------------|
+| `property`           | `crm/v3/properties/{objectType}`                | Object property                   |
 | `carts`           | `crm/v3/objects/carts`                | Shopping cart data                   |
 | `companies`       | `crm/v3/objects/companies`            | Company records                      |
 | `contacts`        | `crm/v3/objects/contacts`             | Contact records                      |
 | `deals`           | `crm/v3/objects/deals`                | Deal/opportunity records             |
 | `discounts`       | `crm/v3/objects/discounts`            | Discount records                     |
 | `fees`            | `crm/v3/objects/fees`                 | Fee records                          |
-| `goals`           | `crm/v3/objects/goals`                | Goal tracking records                |
 | `invoices`        | `crm/v3/objects/invoices`             | Invoice records                      |
-| `leads`           | `crm/v3/objects/leads`                | Lead records                         |
 | `line_items`      | `crm/v3/objects/line_items`           | Line item records                    |
 | `orders`          | `crm/v3/objects/orders`               | Order records                        |
-| `partner_clients` | `crm/v3/objects/partner_clients`      | Partner client records               |
-| `partner_services`| `crm/v3/objects/partner_services`     | Partner service records              |
-| `payments`        | `crm/v3/objects/payments`             | Payment records                      |
+| `payments`        | `crm/v3/objects/commerce_payments`    | Payment records                      |
 | `products`        | `crm/v3/objects/products`             | Product records                      |
 | `quotes`          | `crm/v3/objects/quotes`               | Quote records                        |
 | `taxes`           | `crm/v3/objects/taxes`                | Tax records                          |
-| `tickets`         | `crm/v3/objects/tickets`              | Support ticket records               |
+| `calls`           | `crm/v3/objects/calls`                | Call records                         |
+| `emails`          | `crm/v3/objects/emails`               | Email records                        |
+| `meetings`        | `crm/v3/objects/meetings`             | Meeting records                      |
+| `notes`           | `crm/v3/objects/notes`                | Note records                         |
+| `tasks`           | `crm/v3/objects/tasks`                | Task records                         |
+| `communications`  | `crm/v3/objects/communications`       | Communication records                |
+| `postal_mail`     | `crm/v3/objects/postal_mail`          | Postal mail records                  |
 
 ---
 

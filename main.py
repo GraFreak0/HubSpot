@@ -30,7 +30,7 @@ OBJECTS = {
     "fees": "crm/v3/objects/fees",
     "goal_targets": "crm/v3/objects/goal_targets",
     "invoices": "crm/v3/objects/invoices",
-    "leads": "crm/v3/objects/leads",
+    # "leads": "crm/v3/objects/leads",
     "line_items": "crm/v3/objects/line_items",
     "orders": "crm/v3/objects/orders",
     # "partner_clients": "crm/v3/objects/partner_clients",

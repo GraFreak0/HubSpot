@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-"""
-load_data_fixed.py
-Improved HubSpot -> CSV -> ClickHouse loader with:
- - per-thread ClickHouse client
- - per-thread requests.Session with retries & backoff
- - graceful handling of 403/400 errors
- - chunked properties requests to avoid very long URLs
- - safer pagination & merging of properties per record
-"""
 
 import os
 import time
@@ -55,7 +45,6 @@ OBJECTS = {
     "goal_targets": "crm/v3/objects/goal_targets",
     "invoices": "crm/v3/objects/invoices",
     "line_items": "crm/v3/objects/line_items",
-    # disabled/problematic by default (uncomment if you know you have permissions)
     # "orders": "crm/v3/objects/orders",
     # "partner_clients": "crm/v3/objects/partner_clients",
     # "payments": "crm/v3/objects/commerce_payments",
